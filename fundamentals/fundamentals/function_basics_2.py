@@ -19,3 +19,22 @@ def first_plus_length(list):
 print(first_plus_length([3,4,5,6,7]))
 
 #values greater than second
+newList = []
+def values_greater_than_second(list):
+    for val in list:
+        if val > list[1]:
+            newList.append(val)
+    if len(list)<2:
+        return False
+    print(len(newList))
+    return newList
+print(values_greater_than_second([2,3,4,5,6,7,1]))
+print(values_greater_than_second([]))
+
+# This Length, That Value
+def length_and_value(x,y):
+    myList = []
+    for i in range(x):
+        myList.append(y)
+    return myList
+print(length_and_value(10,3))

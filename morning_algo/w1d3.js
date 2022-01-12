@@ -12,17 +12,17 @@
 
     const str1 = "aaaabbcddd";
     const expected1 = "a4b2c1d3";
-  
+    
     const str2 = "";
     const expected2 = "";
-  
+    
     const str3 = "a";
     const expected3 = "a";
-  
+    
     const str4 = "bbcc";
     const expected4 = "bbcc";
-  
-  /**
+    
+    /**
    * Encodes the given string such that duplicate characters appear once followed
    * by a number representing how many times the char occurs only if the
    * character occurs more than two time.
