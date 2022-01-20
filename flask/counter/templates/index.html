@@ -11,12 +11,14 @@
     <div class="container">
         <h1>Counter</h1>
         <p>{{ count }} times.</p>
-        <form action="/increment">
-            <button>Add two visits!</button>
-        </form>
-        <form action="/reset">
-            <button>Reset</button>
-        </form>
+        <div class="button">
+            <form action="/increment">
+                <button class="btn">Add two visits!</button>
+            </form>
+            <form action="/destroy_session">
+                <button class="btn2">Reset</button>
+            </form>
+        </div>
     </div>
 </body>
 </html>
