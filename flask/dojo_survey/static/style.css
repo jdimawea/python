@@ -1,0 +1,50 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.container {
+    background-color: #33393E;
+    width: fit-content;
+    height: auto;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+}
+
+
+form {
+    text-align: center;
+    color: white;
+    display: inline-block;
+}
+
+
+label {
+    display: block;
+    text-align: left;
+}
+
+
+.block {
+    margin: 10px;
+}
+
+
+h1 {
+    margin: 10px;
+}
+
+
+.btnbox {
+    text-align: left;
+}
+
+
+.btn {
+    padding: 5px 10px;
+    color: black;
+    background-color: #FBBD0A;
+    border-radius: 5px;
+}
