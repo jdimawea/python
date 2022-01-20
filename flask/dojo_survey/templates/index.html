@@ -14,7 +14,7 @@
         <h1 style="color: #FBBD0A; text-align: left;">Dojo Survey</h1>
 
 
-        <form>
+        <form action="/result" method="post">
 
             <div class="block">
                 <label for="name">Name:</label>
@@ -26,11 +26,11 @@
                 <label for="location">Dojo Location:</label> 
                 <select name="location" style="width: 300px;">
                     <option value="" disabled selected hidden>Select A Location...</option>
-                    <option value="chicago">Chicago</option>
-                    <option value="seattle">Seattle</option>
-                    <option value="online">Online</option>
-                    <option value="burbank">Burbank</option>
-                    <option value="bellevue">Bellevue</option>
+                    <option value="Chicago">Chicago</option>
+                    <option value="Seattle">Seattle</option>
+                    <option value="Online">Online</option>
+                    <option value="Burbank">Burbank</option>
+                    <option value="Bellevue">Bellevue</option>
                 </select>
             </div>
 
@@ -39,11 +39,11 @@
                 <label for="language">Favorite Language:</label>
                 <select name="language" style="width: 300px;">
                     <option value="" disabled selected hidden>Select A Language...</option>
-                    <option value="python">Python</option>
-                    <option value="javascript">JavaScript</option>
-                    <option value="html">HTML</option>
-                    <option value="css">CSS</option>
-                    <option value="c#">C#</option>
+                    <option value="Python">Python</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                    <option value="C#">C#</option>
                 </select>
             </div>
 
@@ -55,7 +55,7 @@
 
 
             <div class="btnbox block">
-                <button class="btn">Submit</button>
+                <input type="submit" name="button" value="Submit" style="color: black; background-color: #FBBD0A; padding: 5px 10px;">
             </div>
 
 
