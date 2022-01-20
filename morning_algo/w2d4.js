@@ -29,21 +29,21 @@ const expected4 = false;
  */
 function parensValid(str) {
     let parenthesis = {
-        ")": "(",
+        ")": "("
     }
     let parent = [];
     for (var i = 0; i < str.length; i++){
-        if(str[i] === "(") {
-            parent.push(str[i]);
+        if(str[i] === "(" ) {
+            parent.push(str[i])
             console.log(parent)
         }
         else if (parent[parent.length - 1] === parenthesis[str[i]]) {
             parent.pop()
             console.log(parent)
         }
-        else return false;
+        else return false
     }
     return parent.length ? false : true
 }
 
-console.log(parensValid(str2))
+console.log(parensValid(str1))
