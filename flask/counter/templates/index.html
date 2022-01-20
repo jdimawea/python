@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.html') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <title>Counter</title>
 </head>
 <body>
-    <div>
+    <div class="container">
         <h1>Counter</h1>
-        <p></p>
-        <div>
-            <button>Click</button>
+        <p>{{ count }} times.</p>
+        <form action="/increment">
+            <button>Add two visits!</button>
+        </form>
+        <form action="/reset">
             <button>Reset</button>
-        </div>
+        </form>
     </div>
 </body>
 </html>
