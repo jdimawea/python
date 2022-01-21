@@ -51,3 +51,4 @@ console.log(rotateStr(str, 3))
 console.log(rotateStr(str, 2))
 console.log(rotateStr(str, 10))
 console.log(rotateStr(str, 6))
+
