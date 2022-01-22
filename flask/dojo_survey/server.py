@@ -4,7 +4,7 @@ from flask import Flask, render_template, request, redirect, session
 app = Flask(__name__)
 
 
-app.secret_key = 'VictoriaSecret'
+app.secret_key = 'shhhhhhhh'
 
 
 @app.route('/')
