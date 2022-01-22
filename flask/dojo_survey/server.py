@@ -8,18 +8,23 @@ app.secret_key = 'shhhhhhhh'
 
 
 @app.route('/')
-@app.route('/result', methods=['GET', 'POST'])
-def submit():
-    name = request.form['name']
-    location = request.form['location']
-    language = request.form['language']
-    comment = request.form['comment']
-    return render_template('result.html', name = name, location = location, language = language, comment = comment)
-
-
-@app.route('/return', methods=['POST'])
-def goback():
+@app.route('/index')
+def index():
     return render_template('index.html')
+
+
+@app.route('/process', methods=['POST'])
+def submit():
+    session["name"] = request.form['name']
+    session["location"] = request.form['location']
+    session["language"] = request.form['language']
+    session["comment"] = request.form['comment']
+    return redirect('/result')
+
+
+@app.route('/result')
+def result():
+    return render_template('result.html')
 
 
 if __name__=='__main__':

@@ -13,13 +13,11 @@
     <div class="container" style="color: white; text-align: left;">
 
 
-        <p style="margin: 10px;">Name:              {{ name }}</p>
-        <p style="margin: 10px;">Dojo Location:     {{ location }}</p>
-        <p style="margin: 10px;">Favorite Language: {{ language }}</p>
-        <p style="margin: 10px;">Comment:           {{ comment }}</p>
-        <form action='/return' method='POST'>
-        <input style="background-color: #FBBD0A; padding: 5px 10px; color:black; margin: 10px;"type="submit" value="Go Back">
-        </form>
+        <p style="margin: 10px;">Name:              {{ session["name"] }}</p>
+        <p style="margin: 10px;">Dojo Location:     {{ session["location"] }}</p>
+        <p style="margin: 10px;">Favorite Language: {{ session["language"] }}</p>
+        <p style="margin: 10px;">Comment:           {{ session["comment"] }}</p>
+        <a href="/">Go Back</a>
 
 
     </div>
