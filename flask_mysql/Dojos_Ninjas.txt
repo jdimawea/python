@@ -1,0 +1,40 @@
+INSERT INTO dojos (name, created_at, updated_at)
+VALUES ("Seattle", NOW(), NOW()),
+("Online", NOW(), NOW()),
+("California", NOW(), NOW());
+
+DELETE FROM `dojos_and_ninjas_schema`.`dojos` WHERE (`id` = '1');
+DELETE FROM `dojos_and_ninjas_schema`.`dojos` WHERE (`id` = '2');
+DELETE FROM `dojos_and_ninjas_schema`.`dojos` WHERE (`id` = '3');
+
+INSERT INTO dojos (name, created_at, updated_at)
+VALUES ("Seattle", NOW(), NOW()),
+("Online", NOW(), NOW()),
+("California", NOW(), NOW());
+
+INSERT INTO ninjas (dojo_id, first_name, last_name, age, created_at, updated_at)
+VALUES ("14", "Jonathan", "Dimawea", "21", NOW(), NOW()),
+("14", "Patrick", "Suyat", "22", NOW(), NOW()),
+("14", "Kimi", "Kempf", "22", NOW(), NOW());
+
+INSERT INTO ninjas (dojo_id, first_name, last_name, age, created_at, updated_at)
+VALUES ("15", "Kian", "Sablad", "21", NOW(), NOW()),
+("15", "Sean", "McDonough", "22", NOW(), NOW()),
+("15", "Liam", "Mcdonough", "22", NOW(), NOW());
+
+INSERT INTO ninjas (dojo_id, first_name, last_name, age, created_at, updated_at)
+VALUES ("16", "Chagall", "Ford-Roshon", "22", NOW(), NOW()),
+("16", "David", "Nyguen", "25", NOW(), NOW()),
+("16", "Chase", "Larwin", "22", NOW(), NOW());
+
+SELECT * 
+FROM ninjas
+WHERE dojo_id = 14;
+
+SELECT * 
+FROM ninjas
+WHERE dojo_id = 16;
+
+SELECT dojo_id
+FROM ninjas
+WHERE id = 9;
