@@ -35,11 +35,11 @@ function parensValid(str) {
     for (var i = 0; i < str.length; i++){
         if(str[i] === "(" ) {
             parent.push(str[i])
-            console.log(parent)
+            // console.log(parent)
         }
         else if (parent[parent.length - 1] === parenthesis[str[i]]) {
             parent.pop()
-            console.log(parent)
+            // console.log(parent)
         }
         else return false
     }
