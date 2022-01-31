@@ -7,21 +7,21 @@
     <title>New Dog</title>
 </head>
 <body>
-    <h1>Create a new Dog!</h1>
-    <form action="/dogs/create" method="post">
+    <h1>Edit your Dog!</h1>
+    <form action="/dogs/{{ this_dog.id }}/update" method="post">
         <p>
             Name:
-            <input type="text" name="name" id="">
+            <input type="text" name="name" id="" value="{{ this_dog.name }}">
         </p>
         <p>
             Age:
-            <input type="number" name="age" id="">
+            <input type="number" name="age" id="" value="{{ this_dog.age }}">
         </p>
         <p>
             Hair Color:
-            <input type="text" name="hair_color" id="">
+            <input type="text" name="hair_color" id="" value="{{ this_dog.hair_color }}">
         </p>
-        <button>Create!</button>
+        <button>Edit!</button>
     </form>
     <a href="/">Home</a>
 </body>

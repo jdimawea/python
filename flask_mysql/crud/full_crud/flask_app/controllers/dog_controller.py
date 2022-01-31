@@ -26,3 +26,22 @@ def create_dog():
     Dog.create(request.form)
 
     return redirect("/")
+
+
+@app.route("/dogs/<int:dog_id>/edit")
+def edit_dog(dog_id):
+    return render_template("edit_dog.html", this_dog = Dog.get_one({"id": dog_id}))
+
+
+@app.route("/dogs/update", methods = ["POST"])
+def update_dog():
+    Dog.update(request.form)
+
+    return redirect("/")
+
+
+@app.route("/dogs/<int:dog_id>/delete")
+def delete_dog(dog_id):
+    Dog.delete({"id":dog_id})
+
+    return redirect("/")
