@@ -27,7 +27,7 @@ def register():
 
     return redirect('/dashboard')
 
-@app.route('/login',methods=['POST'])
+@app.route('/register',methods=['POST'])
 def login():
     user = User.get_by_email(request.form)
 
@@ -38,16 +38,16 @@ def login():
         flash("Invalid Password","login")
         return redirect('/')
     session['user_id'] = user.id
-    return redirect('/dashboard')
+    return redirect('/users')
 
-@app.route('/dashboard')
-def dashboard():
+@app.route('/users')
+def display_users():
     if 'user_id' not in session:
         return redirect('/logout')
     data ={
         'id': session['user_id']
     }
-    return render_template("dashboard.html",user=User.get_by_id(data))
+    return render_template("users.html",user=User.get_by_id(data))
 
 @app.route('/logout')
 def logout():
