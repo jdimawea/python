@@ -30,6 +30,7 @@
                     <td>{{ dog.created_at }}</td>
                     <td>{{ dog.updated_at }}</td>
                     <td>
+                        <a href="/dogs/{{ dog.id }}">View</a>
                         <a href="/dogs/{{ dog.id }}/edit">Edit</a>
                         <a href="/dogs/{{ dog.id }}/delete">Delete</a>
                     </td>
@@ -38,5 +39,7 @@
         </tbody>
     </table>
     <a href="/dogs/new">Add a new dog!</a>
+    <a href="/collars/new">Add a new collar!</a>
+
 </body>
 </html>
