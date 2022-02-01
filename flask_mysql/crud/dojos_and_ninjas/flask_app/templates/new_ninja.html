@@ -15,7 +15,7 @@
                 <p>
                     Dojo:
                     <select class="form-selectt" name="dojo_id" id="">
-                        {% for dojo in all_dojos: %}
+                        {% for dojo in dojos %}
                             <option value="{{ dojo.id }}">{{ dojo.name }}</option>
                         {% endfor %}
                     </select>

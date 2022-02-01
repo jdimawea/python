@@ -16,9 +16,9 @@ def dojos():
     return render_template('index.html', all_dojos = list_of_dojos)
 
 
-@app.route("/dojos/<int:dojo_id>")
-def display_dojo(dojo_id):
-    return render_template("dojo_show.html", dojo = Dojo.get_dojo_with_ninjas({"id":dojo_id}))
+@app.route("/dojos/<int:id>")
+def display_dojo(id):
+    return render_template("dojo_show.html", dojo = Dojo.get_dojo_with_ninjas({"id": id}))
 
 
 @app.route("/dojos/create", methods = ["POST"])

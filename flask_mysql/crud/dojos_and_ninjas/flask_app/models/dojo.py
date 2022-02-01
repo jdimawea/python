@@ -15,7 +15,7 @@ class Dojo:
 
     @classmethod
     def create(cls, data):
-        query = "INSERT INTO dojos (name, created_at, updated_at) VALUES (%(dojo_name)s, NOW(), NOW());"
+        query = "INSERT INTO dojos (name, created_at, updated_at) VALUES (%(name)s, NOW(), NOW());"
 
         result = connectToMySQL("dojos_and_ninjas_schema").query_db(query, data)
 
@@ -28,12 +28,12 @@ class Dojo:
 
         results = connectToMySQL('dojos_and_ninjas_schema').query_db(query)
 
-        all_dojos = []
+        dojos = []
 
         for dojo in results:
-            all_dojos.append(cls(dojo))
+            dojos.append(cls(dojo))
 
-        return all_dojos
+        return dojos
 
 
     @classmethod
@@ -48,13 +48,13 @@ class Dojo:
             for row_data in results:
                 ninja_data = {
                     "id": row_data["ninjas.id"],
-                    "dojo": this_dojo,
+                    'dojo':this_dojo,
                     "first_name": row_data["first_name"],
                     "last_name": row_data["last_name"],
                     "age": row_data["age"],
-                    "created_at": row_data["collars.created_at"],
-                    "updated_at": row_data["collars.updated_at"]
+                    "created_at": row_data["ninjas.created_at"],
+                    "updated_at": row_data["ninjas.updated_at"]
                 }
-                this_dojo.ninjas.append(ninja.Ninja(ninja_data))
+                this_dojo.ninjas.append( ninja.Ninja(ninja_data))
 
         return this_dojo

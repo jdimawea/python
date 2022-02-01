@@ -24,7 +24,7 @@
                 <h1>All Dojos</h1>
                 <ul class='list-styled'>
                     {% for dojo in all_dojos: %}
-                        <li><a href='/dojos/{{dojo.id}}'>{{dojo.name}}</a></li>
+                        <li><a href='/dojos/{{ dojo.id }}'>{{ dojo.name }}</a></li>
                     {% endfor %}
                 </ul>
                 <a class='btn' href="/ninjas">Add Ninja</a>
