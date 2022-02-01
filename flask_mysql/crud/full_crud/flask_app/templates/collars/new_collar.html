@@ -13,7 +13,7 @@
         <p>
             Dog:
             <select name="dog_id" id="">
-                {% for dog in all_dogs %}
+                {% for dog in all_dogs: %}
                     <option value="{{ dog.id }}">{{ dog.name }}</option>
                 {% endfor %}
             </select>
